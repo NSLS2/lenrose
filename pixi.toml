@@ -52,7 +52,7 @@ dev-web = { cmd = "npm run dev", cwd = "src/lenrose/web" }
 
 [dependencies]
 python = ">=3.11"
-nodejs = ">=20"
+nodejs = ">=26,<27"
 pip = "*"
 
 [pypi-dependencies]
