@@ -18,7 +18,7 @@ jobs:
       TYPESENSE_PROTOCOL: http
       LENROSE_TILED_URI: http://localhost:8000
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Stand up the exact same self-contained stack developers use locally.
       # docker compose is preinstalled on GitHub runners. Using compose (rather
@@ -27,7 +27,7 @@ jobs:
       - name: Start services (Typesense + Tiled)
         run: docker compose up -d --wait
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -53,11 +53,11 @@ jobs:
       run:
         working-directory: src/lenrose/web
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "26"
 
       - name: Install frontend deps
         run: npm ci
