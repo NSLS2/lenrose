@@ -53,8 +53,8 @@ dev-web = { cmd = "npm run dev", cwd = "src/lenrose/web" }
 
 [dependencies]
 python = ">=3.11"
-nodejs = ">=20"
-pip = "*"
+nodejs = ">=22.23.4,<23"
+pip = ">=26.2.2"
 
 [pypi-dependencies]
 lenrose = { path = ".", editable = true, extras = ["test"] }
